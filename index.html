@@ -5,6 +5,28 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="styles.css">
     <title>Film noir</title>
+   <style>
+         #foszereplo{
+            color: blue;
+            cursor: pointer;
+         }
+         #kep{
+            height: 100px;
+            width: 100px;
+         }
+   </style>
+      <script>
+         function megjelenit(){
+            var img=document.getElementById("kep");
+            if(img.style.display==="none"){
+               document.getElementById("kep").style.display='block';
+            }        
+            else{
+               img.style.display="none";
+            }   
+         }
+      </script>
+    <script src="megjelenit.js"></script>
 </head>
 
 <body>
@@ -35,7 +57,7 @@
       </tr>
       <tr>
    <th>Főszereplő</th>
-   <td>Humphrey Bogart</td>
+   <td id="foszereplo" onclick="megjelenit()">Humphrey Bogart<br><img src="hBogart.jpg" id="kep" style="display:none"></td>
       </tr>
       <tr>
    <th>Zene</th>
